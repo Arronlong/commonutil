@@ -658,7 +658,9 @@ public class NumUtils {
 			String r = formatInt(intnums[i], numArray,unit);
 			if("".equals(r)){//
 				if((i+1)==intnums.length){
-					sb.append(numArray[0]);//结果中追加“零”
+					if (num.length() <= 4) {
+						sb.append(numArray[0]);//结果中追加“零”
+					}
 				}else{
 					zero=true;
 				}
